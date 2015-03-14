@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" media="all">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    
+<style>
+  body {
+  font-family: "Lucida Sans", Verdana, sans-serif;
+  }
+  /* To diplay 3 columns side by side use float and width for each column in % total < 100% because of paddings etc.*/
+  .box {
+  float:left;                      
+  background-color: lightblue;
+    }
+    .header {
+  width: 100%;
+  background-color: blue;
+  border: 1px solid white;
+  text-align: center;
+    }
+    .content {
+  width: 100%;
+    }
+    .main-nav {
+  width: 23%;
+  padding-left: 50px;
+  padding-right: 100px;
+  }
+    .main-nav li {
+  list-style-type: none;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  display: block;
+  width: 60px;
+  border-bottom: 1px solid #e9e9e9;
+    }
+    .article {
+  width: 50%;
+  padding-left: 80px;
+  }
+  .article h2 {
+  text-align: center;
+  }
+  .article p {
+    text-align: justify;
+  }
+    .article img {
+  width: 100%;
+    }  
+    .aside {
+  width: 23%;
+  padding-left: 65px;
+    }
+    .footer {
+  clear: both;
+  background-color: grey;
+  text-align: center;
+    }
+</style>
+</head>
+
+<body>
+  <div class="container"> <!-- Fixed width container -->
+  <!--div class="cantainer-fluid"> <!-- Full width container -->
+    <div class="box">
+      
+      <div class="box header">
+      <h1>Mythri Consultancy</h1>
+      </div>
+      
+      <div class="box content">
+      
+        <div class="box menu">
+        <ul class="main-nav">
+        <li>Home</li>
+        <li>News</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+        </ul>
+        </div>
+        
+        <div class="box article">
+        <h2>Welcome to mythri consultancy</h2>
+        <p>Mythri Consulting is a one-stop hub for IT Training and Placement services. With many years of experience and high quality team of experts, we have established ourselves as a pioneer in the Industry. We help individuals with IT backgrounds, either graduates or post graduates, through industry level training in major advance technologies such as Java UI, Big Data, .Net, Java, iOS/Android, Infomatica, Websphere Admin, Weblogin Admin, Selenium Automation QA, Sales Force and many others. All these courses are developed according to the rising demands of IT professionals proficient in these technologies. We will not only provide the industry level training but also place the candidates at good positions in well-known IT companies such as Google, Facebook, and Apple etc. With our quality efforts and hard work, today we are the market leaders in UI training and placement services.</p>
+        <img src="http://farm8.staticflickr.com/7367/16426879675_e32ac817a8_m.jpg" alt=""/>
+        </div>
+        
+        <div class="box aside">
+        <h3>Training programs</h3>
+        <p>HTML5</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+        <p>Jquery</p>
+        </div>
+        
+      </div>
+      
+      <div class="footer">
+      <p>MYTHRI CONSULTING: 39111 Paseo Padre Pkwy, Fremont, CA 94538 </p>
+      <p>Phone: 510 394 3994 or 510 984 1718</p>
+      <p>© 2015 invader vision | Design by sri </p>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>

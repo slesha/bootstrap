@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" media="all">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<style>
+		#parent-container {border:5px solid black; padding:30px; margin: 10px;}
+		.left {float:left;} 
+		.right {float: right;}
+		/*option 1- overflow:prevents collapsing content with header*/
+		/*.header {overflow: auto;}*/
+		/*option 2-height: if it matches the height of the image or content inside it*/
+		/*.header {height: 100px} */
+		/*option 3-empty div: add an empty div after the header to avoid overlapping;*/
+		/*.clearfix {clear:both;}*/
+		/* option 4: clearfix- fixes the zero height issue by adding clear both in header*/
+		.cf:after {content: ""; display: block; clear: both;}
+				
+		#menu li {display: inline}
+		#menu li a {background-color: darkblue; color: white; padding: 10px 20px; text-decoration: none;}
+		#menu a:hover {background-color: orange;}
+
+		#submit {text-align: center}
+
+		</style>
+	</head>
+	<body>
+		
+		<div id="parent-container" class="container"> <!--for fixed width container-->
+		<!-- div id="parent-container" class="container-fluid"> <!-- For full width container -->
+			<div class="header cf" >
+				<a class="left" id="logo" href="/index.php" title="Support Center">
+					<img src="logo.php" alt="Support Mythriconsulting" >
+				</a>
+				<div class="right">
+				<p>Guest User|<a href="login.php" class="right">login </a></p>
+				</div>
+			</div> 
+			<!-- <div class="clearfix"></div> -->
+			<hr/>
+
+			<div id="main-navigation">
+				<ul id="menu" class="navigation" type="none">
+					<li><a href="http://support.mythriconsulting.com/index.php">Support Center Home</a></li>
+					<li><a href="http://support.mythriconsulting.com/open.php">Submit a ticket</a></li>
+					<li><a href="http://support.mythriconsulting.com/view.php">Check ticket status</a></li>
+				</ul>	
+			</div>
+			<hr/>
+
+			<div class="content">
+				<form method="post">
+					<h3 style="color:darkblue">Open a ticket </h3>
+					<p>Please fill the form to submit a ticket</p>
+					<span><b>Select a department</b></span>
+					<select name="Select a depatment" placeholder="select a department" required>
+					<option value="Technical training">Technical training</option>
+					<option value="Human Resources">Human Resources</option>
+					<option value="Marketing">Marketing</option>
+					<option value="Other">Other</option>
+					</select>	
+					<br/>
+					<p>For training select the subjects</p>
+					<input type="checkbox" name="subject" value="check-HTML"> HTML
+					<input type="checkbox" name="subject" value="check-CSS"> CSS
+					<input type="checkbox" name="subject" value="check-Javascript"> Javascript
+					<input type="checkbox" name="subject" value="check-Jquery"> Jquery
+					<input type="checkbox" name="subject" value="check-Angular JS"> Angular JS
+					<hr/>
+
+					<h3 style="color:darkblue">Contact Information</h3>
+					<label for="Email"><b> Email ID </b></label>
+					<input type="text" name="Email" placeholder="a@gmail.com" required> <br/> <br/>
+					<label for="Fullname"><b> Full Name </b></label>
+					<input type="text" name="Fullname" placeholder="smith jones" required> <br/> <br/>
+					<label for="Phone"><b> Phone number </b></label>
+					<input type="text" name="Phone" placeholder="121-231-1234"> 
+					<span><label for="Phone Ext"><b> Ext: </b></label>
+					<input type="text" name="Phone Ext" placeholder="111"> 
+					</span>
+					<br/></br>
+					<span><b>Gender</b></span>
+					<input type=radio name="gender" value="Male"> Male
+					<input type=radio name="gender" value="Female"> Female
+					<hr/>
+
+  					<h3 style="color:darkblue"><b>Ticket Details</b></h3>
+  					<p> <i>Please describe your issue</i> </p>
+					<label for="Issue Title"><b> Issue title</b></label>
+					<input type="text" name="Issue title" placeholder="Subject" required> 
+					<h4>Issue in detail</h4>
+					<textarea name="Issue Details" rows="10" cols="60">
+					</textarea>
+					<hr/>
+
+					<div id="submit">
+					<input type="submit" value="Submit Ticket">
+					<input type="submit" value="Reset">
+					<input type="submit" value="Cancel">
+					</div>	
+				</form>
+
+			</div>
+			
+			<div class="footer">
+				<p>Copyright © 2015 Support Mythriconsulting - All rights reserved| Design by sri </p>
+			</div>
+		
+		</div>
+	</body>
+
+</html>
